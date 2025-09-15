@@ -1,151 +1,421 @@
 <!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	Edited by SplaciK
--->
 <html>
-	<head>
-		<title>Marcin "SplaciK" Szmeichel</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<head>
+    <title>SplaciK - Personal Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ffffff; /* White background */
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
-		<!-- Header -->
-			<div id="header">
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-				<div class="top">
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* Subtle gradient for header */
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 1;
+        }
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.png" alt="" /></span>
-							<h1 id="title">SplaciK</h1>
-							<p>Marcin Szmeichel</p>
-						</div>
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: #222;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">INTRO</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">PROFILES</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">WORKSHOP</span></a></li>
-							</ul>
-						</nav>
+        header p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-				</div>
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -80px; /* Overlap with header for effect */
+            position: relative;
+            z-index: 2;
+        }
 
-				<div class="bottom">
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: #eee;
+            border: 6px solid #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="http://facebook.com/thesplacik" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="mailto:splacik@raxoga.net" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
 
-				</div>
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-			</div>
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
 
-		<!-- Main -->
-			<div id="main">
+        .section:last-child {
+            border-bottom: none;
+        }
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            position: relative;
+        }
 
-							<header>
-							</header>
-<a href="https://www.exophase.com/user/SplaciK/"><img src="https://card.exophase.com/2/0/20518.png?1757919967"></a>
-							<footer>
-							</footer>
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #007bff; /* Accent color */
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
 
-						</div>
-					</section>
+        .social-columns {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 20px;
+        }
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
+        .social-column {
+            flex: 1;
+            min-width: 280px; /* Minimum width for each column */
+            max-width: 32%; /* Max width to allow three columns on larger screens */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-							<header>
-								<h2>PROFILES</h2>
-							</header>
-<table>
-  <tr>
-    <th><center>SOCIAL</center></th>
-    <th><center>PLATFORMS</center></th>
-    <th><center>GAMES</center></th>
-</tr>
-  <tr>
-    <td><center>
-FACEBOOK – <a href="http://facebook.com/thesplacik">TheSplaciK</a></br>
-YOUTUBE – <a href="https://www.youtube.com/user/TheSplaciK">TheSplaciK</a></br>
-INSTAGRAM – <a href="https://www.instagram.com/splacik/">SplaciK</a></br>
-TWITTER – <a href="https://twitter.com/SplaciK">SplaciK</a></br>
-VKONTAKTE – <a href="https://vk.com/thesplacik">TheSplaciK</a></br>
-SNAPCHAT – <a href="">SplaciK</a></br>
-</center></td>
-    <td><center>
-STEAM – <a href="https://steamcommunity.com/id/splacik">SplaciK</a></br>
-PLAYSTATION – <a href="https://psnprofiles.com/SplaciK">SplaciK</a></br>
-UPLAY – <a href="">TheSplaciK</a></br>
-GOG – <a href="https://www.gog.com/u/SplaciK">SplaciK</a></br>
-XBOX – <a href="https://account.xbox.com/pl-pl/Profile?GamerTag=SplaciK">SplaciK</a></br>
-TWITCH – <a href="https://www.twitch.tv/thesplacik">TheSplaciK</a></br>
-ESL – <a href="https://play.eslgaming.com/player/7524944/">SplaciK</a></br>
-BATTLE.NET – <a href="">TheSplaciK#2235</a></br>
-ORIGIN – <a href="">SplaciK</a></br>
-DISCORD – <a href="">SplaciK</a></br>
-</center></td>
-    <td><center>
-FORTNITE – <a href="https://fortnitetracker.com/profile/all/SplaciK">SplaciK</a></br>
-OSU! – <a href="https://osu.ppy.sh/users/8088366">SplaciK</a></br>
-CS:GO – <a href="https://tracker.gg/csgo/profile/steam/76561197999790768/overview">SplaciK</a></br>
-MINECRAFT – <a href="https://pl.namemc.com/profile/TheSplaciK.1">TheSplaciK</a></br>
-COD MODERN WARFARE – <a href="https://cod.tracker.gg/mw/profile/bnet/SplaciK-2235">SplaciK</a></br>
-BATTLEFIELD V – <a href="https://battlefieldtracker.com/bfv/profile/origin/SplaciK/overview">SplaciK</a></br>
-LEAGUE OF LEGENDS – <a href="https://eune.op.gg/summoner/userName=MrSplaciK">MrSplaciK</a></br>
-RED DEAD ONLINE – <a href="https://socialclub.rockstargames.com/member/splacik/games/rdo/overview">SplaciK</a></br>
-GTA ONLINE – <a href="https://pl.socialclub.rockstargames.com/games/gtav/pc/career/overview/gtaonline">SplaciK</a></br>
-</center></td>
-  </tr>
-</table>
-						</div>
-					</section>
+        .social-item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: block; /* Make the entire box clickable */
+            text-decoration: none; /* Remove underline from the whole box link */
+            color: inherit; /* Inherit text color */
+            position: relative; /* For the label position */
+        }
 
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
+        .social-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
 
-							<header>
-								<h2>WORKSHOP</h2>
-							</header>
-							DOORKICKERS: &nbsp; </br>
-							<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=591632539">NeuenBurg</a></br></br>
-							MINECRAFT: &nbsp; </br>
-							<a href="https://www.planetminecraft.com/project/escape-from-your-mind/">Escape From Your Mind</a></br>
-							<a href="https://www.planetminecraft.com/project/escape-from-your-mind---awareness/">Escape From Your Mind - Awareness</a></br>
-							<a href="https://www.planetminecraft.com/project/parkour-your-mind/">Parkour Your Mind</a></br></br>
-							N++: &nbsp; </br>
-							Search in Game by level name: <a href="">NSK</a>
-						</div>
-					</section>
+        .social-item p {
+            margin: 0 0 5px 0;
+            font-size: 0.9em;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-			</div>
+        .social-item span, .social-item a.link-text {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #007bff;
+            display: block;
+            word-break: break-word;
+        }
 
-		<!-- Footer -->
+        .social-item a.link-text:hover {
+            color: #0056b3;
+        }
+
+        /* Styling for items without a valid URL */
+        .social-item.no-link span {
+            color: #555; /* Slightly darker grey for non-clickable items */
+        }
 
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .workshop-links {
+            text-align: center;
+            padding: 0 20px;
+        }
 
-	</body>
+        .workshop-links p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .workshop-links a {
+            display: inline-block;
+            margin: 8px 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .workshop-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #007bff;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .workshop-links a:hover {
+            color: #0056b3;
+        }
+
+        .workshop-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f0f0f0;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8em;
+            }
+
+            .social-column {
+                max-width: 48%; /* Two columns on medium screens */
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .social-column {
+                max-width: 100%; /* Single column on small screens */
+                min-width: unset;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hello, I'm Marcin "SplaciK" Szmeichel</h1>
+        <p>Welcome to my personal corner of the internet. Find all my social links and creations below!</p>
+    </header>
+
+    <div class="profile-section">
+        <div class="profile-photo">
+            <img src="/images/splacik.png" alt="Profile Picture">
+        </div>
+    </div>
+
+    <section id="social-links" class="section">
+        <div class="container">
+            <h2>My Social Hub</h2>
+            <div class="social-columns">
+                <!-- Column 1 -->
+                <div class="social-column">
+                    <a class="social-item" href="http://facebook.com/thesplacik" target="_blank">
+                        <p>FACEBOOK</p>
+                        <span>TheSplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://www.youtube.com/user/TheSplaciK" target="_blank">
+                        <p>YOUTUBE</p>
+                        <span>TheSplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://www.instagram.com/splacik/" target="_blank">
+                        <p>INSTAGRAM</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://twitter.com/SplaciK" target="_blank">
+                        <p>TWITTER</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://vk.com/thesplacik" target="_blank">
+                        <p>VKONTAKTE</p>
+                        <span>TheSplaciK</span>
+                    </a>
+                    <div class="social-item no-link">
+                        <p>SNAPCHAT</p>
+                        <span>SplaciK</span>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="social-column">
+                    <a class="social-item" href="https://steamcommunity.com/id/splacik" target="_blank">
+                        <p>STEAM</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://psnprofiles.com/SplaciK" target="_blank">
+                        <p>PLAYSTATION</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <div class="social-item no-link">
+                        <p>UPLAY</p>
+                        <span>TheSplaciK</span>
+                    </div>
+                    <a class="social-item" href="https://www.gog.com/u/SplaciK" target="_blank">
+                        <p>GOG</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://account.xbox.com/pl-pl/Profile?GamerTag=SplaciK" target="_blank">
+                        <p>XBOX</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://www.twitch.tv/thesplacik" target="_blank">
+                        <p>TWITCH</p>
+                        <span>TheSplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://play.eslgaming.com/player/7524944/" target="_blank">
+                        <p>ESL</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <div class="social-item no-link">
+                        <p>BATTLE.NET</p>
+                        <span>TheSplaciK#2235</span>
+                    </div>
+                    <div class="social-item no-link">
+                        <p>ORIGIN</p>
+                        <span>SplaciK</span>
+                    </div>
+                    <div class="social-item no-link">
+                        <p>DISCORD</p>
+                        <span>SplaciK</span>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="social-column">
+                    <a class="social-item" href="https://fortnitetracker.com/profile/all/SplaciK" target="_blank">
+                        <p>FORTNITE</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://osu.ppy.sh/users/8088366" target="_blank">
+                        <p>OSU!</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://tracker.gg/csgo/profile/steam/76561197999790768/overview" target="_blank">
+                        <p>CS:GO</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://pl.namemc.com/profile/TheSplaciK.1" target="_blank">
+                        <p>MINECRAFT</p>
+                        <span>TheSplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://cod.tracker.gg/mw/profile/bnet/SplaciK-2235" target="_blank">
+                        <p>COD MODERN WARFARE</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://battlefieldtracker.com/bfv/profile/origin/SplaciK/overview" target="_blank">
+                        <p>BATTLEFIELD V</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://eune.op.gg/summoner/userName=MrSplaciK" target="_blank">
+                        <p>LEAGUE OF LEGENDS</p>
+                        <span>MrSplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://socialclub.rockstargames.com/member/splacik/games/rdo/overview" target="_blank">
+                        <p>RED DEAD ONLINE</p>
+                        <span>SplaciK</span>
+                    </a>
+                    <a class="social-item" href="https://pl.socialclub.rockstargames.com/games/gtav/pc/career/overview/gtaonline" target="_blank">
+                        <p>GTA ONLINE</p>
+                        <span>SplaciK</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workshop" class="section">
+        <div class="container">
+            <h2>WORKSHOP</h2>
+            <div class="workshop-links">
+                <p>DOORKICKERS:</p>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=591632539" target="_blank">NeuenBurg</a>
+                <br><br>
+                <p>MINECRAFT:</p>
+                <a href="https://www.planetminecraft.com/project/escape-from-your-mind/" target="_blank">Escape From Your Mind</a>
+                <br>
+                <a href="https://www.planetminecraft.com/project/escape-from-your-mind---awareness/" target="_blank">Escape From Your Mind - Awareness</a>
+                <br>
+                <a href="https://www.planetminecraft.com/project/parkour-your-mind/" target="_blank">Parkour Your Mind</a>
+                <br><br>
+                <p>N++:</p>
+                <span>Search in Game by level name: NSK</span>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
