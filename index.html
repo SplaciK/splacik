@@ -24,18 +24,22 @@
 
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 30px 20px 0px 20px; /* Reduced padding-bottom */
             background: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* Subtle gradient for header */
             border-bottom: 1px solid #ddd;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             position: relative;
-            z-index: 1;
+            z-index: 1; /* Ensure header is behind profile photo */
+            display: flex; /* Added flexbox for better alignment */
+            flex-direction: column;
+            justify-content: flex-end; /* Aligns content to the bottom */
+            align-items: center;
         }
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 3.5em;
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* Reduced margin */
             color: #222;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
@@ -44,16 +48,16 @@
             font-size: 1.2em;
             color: #555;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto; /* Reduced bottom margin */
         }
 
         .profile-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: -80px; /* Overlap with header for effect */
+            margin-top: -60px; /* Reduced overlap with header */
             position: relative;
-            z-index: 2;
+            z-index: 2; /* Profile photo on top */
         }
 
         .profile-photo {
@@ -81,7 +85,7 @@
         }
 
         .section {
-            padding: 60px 0;
+            padding: 40px 0; /* Reduced padding */
             border-bottom: 1px solid #f0f0f0;
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.02);
@@ -95,7 +99,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5em;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px; /* Reduced margin */
             color: #333;
             position: relative;
         }
@@ -106,7 +110,7 @@
             width: 60px;
             height: 3px;
             background-color: #007bff; /* Accent color */
-            margin: 15px auto 0;
+            margin: 10px auto 0; /* Reduced margin */
             border-radius: 2px;
         }
 
@@ -178,18 +182,23 @@
 
         .workshop-links p {
             font-size: 1.1em;
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Reduced margin */
+            margin-top: 20px; /* Added margin-top for spacing between sections */
             color: #444;
         }
 
+        .workshop-links p:first-of-type {
+            margin-top: 0; /* No top margin for the very first paragraph */
+        }
+
         .workshop-links a {
-            display: inline-block;
-            margin: 8px 15px;
+            display: block; /* Changed to block for better vertical spacing control */
+            margin: 5px 0; /* Reduced vertical margin */
             text-decoration: none;
             color: #007bff;
             font-weight: 600;
             transition: color 0.3s ease, transform 0.3s ease;
-            padding: 8px 0;
+            padding: 5px 0; /* Reduced padding */
             position: relative;
         }
 
@@ -257,7 +266,7 @@
             }
 
             .section {
-                padding: 40px 0;
+                padding: 30px 0; /* Further reduced padding */
             }
 
             h2 {
@@ -269,8 +278,8 @@
 <body>
 
     <header>
-        <h1>Hello, I'm Marcin "SplaciK" Szmeichel</h1>
-        <p>Welcome to my personal corner of the internet. Find all my social links and creations below!</p>
+        <h1>SplaciK</h1>
+        <p>Welcome to my personal corner of the internet.</br></br></br></p>
     </header>
 
     <div class="profile-section">
@@ -278,7 +287,8 @@
             <img src="images/splacik.png" alt="Profile Picture">
         </div>
     </div>
-
+	</br>
+<center><a href="https://www.exophase.com/user/SplaciK/"><img src="https://card.exophase.com/2/0/20518.png?1757950678"></a></center>
     <section id="social-links" class="section">
         <div class="container">
             <h2>My Social Hub</h2>
@@ -404,14 +414,10 @@
             <div class="workshop-links">
                 <p>DOORKICKERS:</p>
                 <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=591632539" target="_blank">NeuenBurg</a>
-                <br><br>
                 <p>MINECRAFT:</p>
                 <a href="https://www.planetminecraft.com/project/escape-from-your-mind/" target="_blank">Escape From Your Mind</a>
-                <br>
                 <a href="https://www.planetminecraft.com/project/escape-from-your-mind---awareness/" target="_blank">Escape From Your Mind - Awareness</a>
-                <br>
                 <a href="https://www.planetminecraft.com/project/parkour-your-mind/" target="_blank">Parkour Your Mind</a>
-                <br><br>
                 <p>N++:</p>
                 <span>Search in Game by level name: NSK</span>
             </div>
